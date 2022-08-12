@@ -1,13 +1,17 @@
-package com.example.demo;
+package com.example.demo.controller;
 
 
+import com.example.demo.entity.Word;
+import com.example.demo.repository.WordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @Controller // This means that this class is a Controller
 @RequestMapping(path="/demo")
+@Validated
 public class WordController {
 
         @Autowired
